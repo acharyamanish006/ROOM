@@ -1,0 +1,28 @@
+@import "src/Scss_Variable.scss";
+
+.navContainer {
+  //   border: 1px solid blue;
+  position: fixed;
+  bottom: 1px;
+  width: 100vw;
+  padding: 1rem;
+  color: white;
+  background-color: rgb(44, 43, 43);
+  .navWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .endCall {
+      text-decoration: none !important;
+      color: white;
+      padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      background-color: rgb(153, 7, 7);
+      border-radius: 0.25rem;
+    }
+    .navIcon {
+      cursor: pointer;
+    }
+  }
+}

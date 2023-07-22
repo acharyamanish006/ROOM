@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+body{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    /* overflow-y: scroll; */
+}
+.Show{
+    display: block;
+}
+.Hide{
+    display: none;
+}

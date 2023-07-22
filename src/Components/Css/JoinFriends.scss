@@ -1,0 +1,67 @@
+@import "src/Scss_Variable.scss";
+
+.joinFriendsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(247, 247, 247, 0.178);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.293);
+  width: 100vw;
+  // background-color: aliceblue;
+  .joinFriendsWrapper {
+    // background-color: aqua;
+    // margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    .joinFriendsHeader {
+      p {
+        font-size: 1.6rem;
+        font-weight: 700;
+        font-family: sans-serif;
+      }
+    }
+    .joinFriendsInputBox {
+      .joinFriendsInputField {
+        border-radius: 0.5rem;
+        width: 30vw;
+        outline: none;
+        opacity: 0.8;
+        padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+        font-size: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.423);
+      }
+    }
+    .joinFriendsBtns {
+      display: flex;
+      justify-content: flex-end;
+      .joinFriendsBtn {
+        cursor: pointer;
+        padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+        // font-weight: 700;
+        border: none;
+        border-radius: 0.4rem;
+        margin: 1rem;
+      }
+      .joinFriendsCancelBtn {
+        border: 1px solid rgba(0, 0, 0, 0.342);
+        background-color: $ZoomWhite;
+      }
+      .joinFriendsJoinBtn {
+        // font-size: 1rem;
+        font-weight: 600;
+        color: $ZoomWhite;
+        background-color: $ZoomPrimaryColor;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .joinFriendsContainer {
+    .joinFriendsInputField {
+      width: 60vw !important;
+    }
+  }
+}

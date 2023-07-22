@@ -1,0 +1,50 @@
+@import "src/Scss_Variable.scss";
+
+.homeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: antiquewhite;
+  .homeWrapper {
+    margin-top: 18vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // background-color: aliceblue;
+    // background-color: antiquewhite;
+
+    .homeHeader {
+      // background-color: aqua;
+      p {
+        margin: 0;
+        padding: 0;
+        // font-family: 'Inter';
+        font-size: 4rem;
+        // font-weight: 900;
+        font-style: italic;
+        color: $ZoomPrimaryColor;
+      }
+    }
+    .homeBtns {
+      // background-color: aquamarine;
+      display: flex;
+      flex-direction: column;
+      .homeBtn {
+        cursor: pointer;
+        padding: 0.65rem 4.5rem 0.65rem 4.5rem;
+        font-weight: 700;
+        border: none;
+        border-radius: 0.4rem;
+        margin: 1rem;
+      }
+      .homeJoinBtn {
+        color: $ZoomWhite;
+        background-color: $ZoomPrimaryColor;
+      }
+      .homeCallBtn {
+        border: 1px solid rgba(0, 0, 0, 0.342);
+        background-color: $ZoomWhite;
+      }
+    }
+  }
+}

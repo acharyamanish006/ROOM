@@ -1,0 +1,47 @@
+.hostMeetingContainer {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  height: 100vh;
+  // overflow-y: scroll;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  //   justify-content: center;
+  position: relative;
+
+  align-items: center;
+  .PersonalId {
+    margin-top: 0.5rem;
+    background-color: rgba(247, 247, 247, 0.178);
+    border: 1px solid rgba(255, 255, 255, 0.485);
+    border-radius: 0.25rem;
+    display: flex;
+    margin-bottom: 10vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    div {
+      width: fit-content;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        margin: 0;
+      }
+      .copyClipBoard {
+        cursor: pointer;
+        margin-left: 2vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hostMeetingContainer {
+    overflow-y: scroll;
+  }
+}
