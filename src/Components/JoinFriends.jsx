@@ -1,6 +1,6 @@
 import "./Css/JoinFriends.scss";
 import { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { PeerContext } from "./PeerContext";
 // import OnCall from "./OnCall";
@@ -50,14 +50,14 @@ export default function JoinFriends() {
             />
           </div>
           <div className="joinFriendsBtns">
-            {/* <Link to={"/"}> */}
-            <button
-              className="joinFriendsBtn joinFriendsCancelBtn"
-              onClick={HideJoinFriends}
-            >
-              Cancel
-            </button>
-            {/* </Link> */}
+            <Link to={"/"}>
+              <button
+                className="joinFriendsBtn joinFriendsCancelBtn"
+                onClick={HideJoinFriends}
+              >
+                Cancel
+              </button>
+            </Link>
             {/* <Link to={"oncall"}> */}
             <button
               className="joinFriendsBtn joinFriendsJoinBtn"

@@ -46,7 +46,8 @@ export default function NavBar() {
           )}
         </div>
         <Link to={"/callended"}>
-          <div className="endCall ">END</div>
+          {/* <div>END</div> */}
+          <button className="endCall ">END</button>
         </Link>
         <div className="chat">
           <FontAwesomeIcon icon={faComment} />
