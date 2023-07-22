@@ -34,19 +34,19 @@ export default function OnCall() {
           <div className="videoSection">
             <video
               className="videoTags"
-              id="localVideo"
-              ref={localVideo}
-              autoPlay
-              playsInline
-              muted
-            ></video>
-            <video
-              className="videoTags"
               id="remoteVideo"
               ref={userVideo}
               autoPlay
               playsInline
               poster="https://media.tenor.com/FBeNVFjn-EkAAAAC/ben-redblock-loading.gif"
+            ></video>
+            <video
+              className="videoTags"
+              id="localVideo"
+              ref={localVideo}
+              autoPlay
+              playsInline
+              muted
             ></video>
           </div>
         </div>
