@@ -35,13 +35,23 @@
         font-weight: 700;
         border: none;
         border-radius: 0.4rem;
+        transition: all ease-in-out 450ms;
         margin: 1rem;
       }
       .homeJoinBtn {
+        &:hover {
+          background-color: $ZoomWhite;
+          color: black;
+        }
+        border: 1px solid rgba(0, 0, 0, 0.342);
         color: $ZoomWhite;
         background-color: $ZoomPrimaryColor;
       }
       .homeCallBtn {
+        &:hover {
+          background-color: $ZoomPrimaryColor;
+          color: white;
+        }
         border: 1px solid rgba(0, 0, 0, 0.342);
         background-color: $ZoomWhite;
       }

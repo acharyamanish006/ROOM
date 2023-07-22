@@ -11,7 +11,7 @@ export default function Home() {
       <div className="homeContainer">
         <div className="homeWrapper">
           <div className="homeHeader">
-            <p>ZOOM</p>
+            <p>ROOM</p>
           </div>
           <div className="homeBtns">
             <Link to={"joinmeeting"}>

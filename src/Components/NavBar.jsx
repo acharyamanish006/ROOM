@@ -18,7 +18,7 @@ export default function NavBar() {
         <div className="mute muteVideo navIcon">
           <FontAwesomeIcon icon={faVideo} />
         </div>
-        <Link to={"/"}>
+        <Link to={"/callended"}>
           <div className="endCall navIcon">END</div>
         </Link>
         <div className="chat">

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { PeerContext } from "./Components/PeerContext";
 import CallBox from "./Components/CallBox";
 import HostMeeting from "./Components/HostMeeting";
+import CallEnded from "./Components/CallEnded";
 
 function App() {
   const { InitFunc } = useContext(PeerContext);
@@ -26,6 +27,7 @@ function App() {
           <Route path="*" element={<Home />} />
           <Route path="joinmeeting" element={<CallBox />} />
           <Route path="hostmeeting" element={<HostMeeting />} />
+          <Route path="callended" element={<CallEnded />} />
         </Routes>
       </Router>
     </>
