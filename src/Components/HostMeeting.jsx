@@ -13,6 +13,7 @@ export default function HostMeeting() {
 
   const copiedToClipBoard = () => {
     Swal.fire("Copied to Clipboard");
+    Swal.fire({ confirmButtonColor: "#2d8cff", title: "Copied to Clipboard" });
   };
   return (
     <div className="hostMeetingContainer">
