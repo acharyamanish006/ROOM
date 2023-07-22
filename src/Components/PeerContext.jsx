@@ -29,7 +29,7 @@ const ContextProvider = ({ children }) => {
 
   const InitFunc = () => {
     navigator.mediaDevices
-      .getUserMedia({ video: true })
+      .getUserMedia({ video: true, audio: true })
       .then((currentStream) => {
         console.log(currentStream);
         localVideo.current.srcObject = currentStream;
