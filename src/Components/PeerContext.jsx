@@ -15,9 +15,27 @@ const ContextProvider = ({ children }) => {
   let peerRef = useRef();
   let localVideo = useRef(null);
   let userVideo = useRef(null);
+  let isVideoOn = true;
+  let isAudioOn = true;
 
+  let streamOption = { video: isVideoOn, audio: isAudioOn };
   const ShowJoinFriends = () => {
     setJoinFriends(true);
+  };
+
+  const muteAudio = () => {
+    console.log(localStream.current.getTracks());
+    isAudioOn = !isAudioOn;
+    console.log(isAudioOn);
+    localStream.current.getTracks()[0].enabled = isAudioOn;
+    console.log(localStream.current.getTracks());
+  };
+  const muteVideo = () => {
+    console.log(localStream.current.getTracks());
+    isVideoOn = !isVideoOn;
+    console.log(isAudioOn);
+    localStream.current.getTracks()[1].enabled = isVideoOn;
+    console.log(localStream.current.getTracks());
   };
 
   const HideJoinFriends = () => {
@@ -29,13 +47,14 @@ const ContextProvider = ({ children }) => {
 
   const InitFunc = () => {
     navigator.mediaDevices
-      .getUserMedia({ video: true, audio: true })
+      .getUserMedia(streamOption)
       .then((currentStream) => {
-        console.log(currentStream);
+        console.log(currentStream.getTracks());
+        // currentStream.getTracks();
         localVideo.current.srcObject = currentStream;
         // localVideo = currentStream;
         localStream.current = currentStream;
-        console.log(currentStream.id);
+        // console.log(currentStream.id);
         // let id = currentStream.id;
       })
       .catch((err) => {
@@ -68,6 +87,10 @@ const ContextProvider = ({ children }) => {
         socketRef,
         isReloaded,
         setIsReloaded,
+        isAudioOn,
+        muteAudio,
+        isVideoOn,
+        muteVideo,
       }}
     >
       {children}
