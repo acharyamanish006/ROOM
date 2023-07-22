@@ -33,14 +33,17 @@ export default function NavBar() {
       <div className="navWrapper">
         <div className="mute muteAudio navIcon" onClick={audioCheck}>
           {audioClick ? (
-            <FontAwesomeIcon icon={faMicrophoneSlash} />
+            <FontAwesomeIcon
+              icon={faMicrophoneSlash}
+              style={{ color: "#e60000" }}
+            />
           ) : (
             <FontAwesomeIcon icon={faMicrophone} />
           )}
         </div>
         <div className="mute muteVideo navIcon" onClick={videoCheck}>
           {videoClick ? (
-            <FontAwesomeIcon icon={faVideoSlash} />
+            <FontAwesomeIcon icon={faVideoSlash} style={{ color: "#e60000" }} />
           ) : (
             <FontAwesomeIcon icon={faVideo} />
           )}
