@@ -25,9 +25,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Home />} />
-          <Route path="joinmeeting" element={<CallBox />} />
-          <Route path="hostmeeting" element={<HostMeeting />} />
-          <Route path="callended" element={<CallEnded />} />
+          <Route path="/joinmeeting" element={<CallBox />} />
+          <Route path="/hostmeeting" element={<HostMeeting />} />
+          <Route path="/callended" element={<CallEnded />} />
         </Routes>
       </Router>
     </>
