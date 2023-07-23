@@ -14,12 +14,12 @@ export default function Home() {
             <p>ROOM</p>
           </div>
           <div className="homeBtns">
-            <Link to={"joinmeeting"}>
+            <Link to={"/joinmeeting"}>
               <button className="homeBtn homeJoinBtn" onClick={ShowJoinFriends}>
                 Join Meeting
               </button>
             </Link>
-            <Link to={"hostmeeting"}>
+            <Link to={"/hostmeeting"}>
               <button className="homeBtn homeCallBtn">Host Meeting</button>
             </Link>
           </div>
