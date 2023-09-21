@@ -8,11 +8,11 @@ import HostMeeting from "./Components/HostMeeting";
 import CallEnded from "./Components/CallEnded";
 
 function App() {
-  const { InitFunc } = useContext(PeerContext);
-  // Init peerjs connection when component mounts for the first time
-  useEffect(() => {
-    InitFunc();
-  }, []);
+  // const { InitFunc } = useContext(PeerContext);
+  // // Init peerjs connection when component mounts for the first time
+  // useEffect(() => {
+  //   InitFunc();
+  // }, []);
   return (
     // <>
     // <Home />

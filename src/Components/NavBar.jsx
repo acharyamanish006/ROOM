@@ -13,7 +13,8 @@ import { useContext, useState } from "react";
 import { PeerContext } from "./PeerContext";
 
 export default function NavBar() {
-  let { isVideoOn, muteAudio, muteVideo } = useContext(PeerContext);
+  let { isVideoOn, muteAudio, muteVideo, startCapture } =
+    useContext(PeerContext);
   const [audioClick, setAudioClick] = useState(false);
   const [videoClick, setVideoClick] = useState(false);
   const videoCheck = () => {
@@ -55,7 +56,7 @@ export default function NavBar() {
         <div className="chat">
           <FontAwesomeIcon icon={faComment} />
         </div>
-        <div className="moreOption navIcon">
+        <div className="moreOption navIcon" onClick={startCapture}>
           <FontAwesomeIcon icon={faEllipsis} />
         </div>
       </div>

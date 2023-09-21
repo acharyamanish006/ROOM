@@ -45,6 +45,32 @@ const ContextProvider = ({ children }) => {
     iscall(true);
   };
 
+  //screen share
+  const displayMediaOptions = {
+    video: {
+      displaySurface: "window",
+    },
+    audio: false,
+  };
+
+  function startCapture(displayMediaOptions) {
+    console.log("start screen share");
+    return navigator.mediaDevices
+      .getDisplayMedia(displayMediaOptions)
+      .then((stream) => {
+        console.log("share", stream, "share");
+        localVideo.current.srcObject = stream;
+        userVideo.current.srcObject = stream;
+        // localVideo = currentStream;
+        localStream.current = stream;
+      })
+      .catch((err) => {
+        console.error(err);
+        return null;
+      });
+  }
+
+  ///init function
   const InitFunc = () => {
     navigator.mediaDevices
       .getUserMedia(streamOption)
@@ -91,6 +117,7 @@ const ContextProvider = ({ children }) => {
         muteAudio,
         isVideoOn,
         muteVideo,
+        startCapture,
       }}
     >
       {children}
