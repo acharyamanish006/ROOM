@@ -5,6 +5,7 @@ const PeerContext = createContext();
 
 const ContextProvider = ({ children }) => {
   const [myId, setMyId] = useState("");
+  const [frndId, setfrndId] = useState("");
   const [iscall, setIsCall] = useState(false);
   const [joinFriends, setJoinFriends] = useState(false);
   const [isReloaded, setIsReloaded] = useState(false);
@@ -55,18 +56,27 @@ const ContextProvider = ({ children }) => {
 
   function startCapture(displayMediaOptions) {
     console.log("start screen share");
-    return navigator.mediaDevices
+    navigator.mediaDevices
       .getDisplayMedia(displayMediaOptions)
       .then((stream) => {
+        console.log(frndId);
+        const call = peerRef.current.call(frndId, stream);
+        call.on("stream", (remoteStream) => {
+          // Show stream in some <video> element.
+          userVideo.current.srcObject = remoteStream;
+        });
         console.log("share", stream, "share");
-        localVideo.current.srcObject = stream;
-        userVideo.current.srcObject = stream;
+        // localVideo.current.srcObject = stream;
         // localVideo = currentStream;
-        localStream.current = stream;
+        // localStream.current = stream;
+      })
+      .then(() => {
+        // InitFunc();
+        console.log("stop");
       })
       .catch((err) => {
         console.error(err);
-        return null;
+        // return null;
       });
   }
 
@@ -76,6 +86,7 @@ const ContextProvider = ({ children }) => {
       .getUserMedia(streamOption)
       .then((currentStream) => {
         console.log(currentStream.getTracks());
+        console.log(currentStream);
         // currentStream.getTracks();
         localVideo.current.srcObject = currentStream;
         // localVideo = currentStream;
@@ -118,6 +129,7 @@ const ContextProvider = ({ children }) => {
         isVideoOn,
         muteVideo,
         startCapture,
+        setfrndId,
       }}
     >
       {children}

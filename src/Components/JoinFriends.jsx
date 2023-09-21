@@ -8,12 +8,19 @@ import { PeerContext } from "./PeerContext";
 export default function JoinFriends() {
   const [calleeId, setCalleeId] = useState("");
   const [isclick, setIsClick] = useState(false);
-  const { peerRef, userVideo, localStream, setIsCall, HideJoinFriends } =
-    useContext(PeerContext);
+  const {
+    peerRef,
+    userVideo,
+    localStream,
+    setIsCall,
+    HideJoinFriends,
+    setfrndId,
+  } = useContext(PeerContext);
 
   const friendsUserId = (e) => {
     e.preventDefault();
     setCalleeId(e.currentTarget.value);
+    setfrndId(e.currentTarget.value);
   };
 
   const callFriend = async () => {
