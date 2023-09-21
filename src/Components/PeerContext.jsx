@@ -1,4 +1,5 @@
 import { createContext, useRef, useState } from "react";
+import { Navigate } from "react-router-dom";
 // import Peer from "peerjs";
 
 const PeerContext = createContext();
@@ -91,6 +92,12 @@ const ContextProvider = ({ children }) => {
       });
   }
 
+  //call ended
+
+  function endCall() {
+    peerRef.current.distroy();
+    console.log("call ended");
+  }
   ///init function
   const InitFunc = () => {
     navigator.mediaDevices
@@ -107,12 +114,18 @@ const ContextProvider = ({ children }) => {
       })
       .catch((err) => {
         console.log(err);
+        console.log("err");
       });
     const peer = new Peer();
+
     peer.on("open", (id) => {
       console.log(id);
       setMyId(id);
       peerRef.current = peer;
+    });
+    peer.on("di", () => {
+      console.log("peer close");
+      // <Navigate to="callended" />;
     });
   };
 
@@ -141,6 +154,7 @@ const ContextProvider = ({ children }) => {
         muteVideo,
         startCapture,
         setfrndId,
+        endCall,
       }}
     >
       {children}

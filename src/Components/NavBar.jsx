@@ -13,7 +13,7 @@ import { useContext, useState } from "react";
 import { PeerContext } from "./PeerContext";
 
 export default function NavBar() {
-  let { isVideoOn, muteAudio, muteVideo, startCapture } =
+  let { isVideoOn, muteAudio, muteVideo, startCapture, endCall } =
     useContext(PeerContext);
   const [audioClick, setAudioClick] = useState(false);
   const [videoClick, setVideoClick] = useState(false);
@@ -51,7 +51,14 @@ export default function NavBar() {
         </div>
         <Link to={"/callended"}>
           {/* <div>END</div> */}
-          <button className="endCall ">END</button>
+          <button
+            className="endCall "
+            onClick={() => {
+              endCall();
+            }}
+          >
+            END
+          </button>
         </Link>
         <div className="chat">
           <FontAwesomeIcon icon={faComment} />
