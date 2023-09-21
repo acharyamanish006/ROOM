@@ -59,6 +59,9 @@ const ContextProvider = ({ children }) => {
     navigator.mediaDevices
       .getDisplayMedia(displayMediaOptions)
       .then((stream) => {
+        console.log(stream.getTracks()[0]);
+        console.log(stream.getVideoTracks());
+
         console.log(frndId);
         const call = peerRef.current.call(frndId, stream);
         call.on("stream", (remoteStream) => {
@@ -69,6 +72,14 @@ const ContextProvider = ({ children }) => {
         // localVideo.current.srcObject = stream;
         // localVideo = currentStream;
         // localStream.current = stream;
+        stream.getTracks()[0].onended = () => {
+          console.log("screen stop");
+          const call = peerRef.current.call(frndId, localStream.current);
+          call.on("stream", (remoteStream) => {
+            // Show stream in some <video> element.
+            userVideo.current.srcObject = remoteStream;
+          });
+        };
       })
       .then(() => {
         // InitFunc();

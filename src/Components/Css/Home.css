@@ -1,0 +1,48 @@
+.homeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homeContainer .homeWrapper {
+  margin-top: 18vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.homeContainer .homeWrapper .homeHeader p {
+  margin: 0;
+  padding: 0;
+  font-size: 4rem;
+  font-style: italic;
+  color: #2d8cff;
+}
+.homeContainer .homeWrapper .homeBtns {
+  display: flex;
+  flex-direction: column;
+}
+.homeContainer .homeWrapper .homeBtns .homeBtn {
+  cursor: pointer;
+  padding: 0.65rem 4.5rem 0.65rem 4.5rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.4rem;
+  transition: all ease-in-out 450ms;
+  margin: 1rem;
+}
+.homeContainer .homeWrapper .homeBtns .homeJoinBtn {
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  color: #ffffff;
+  background-color: #2d8cff;
+}
+.homeContainer .homeWrapper .homeBtns .homeJoinBtn:hover {
+  background-color: #ffffff;
+  color: black;
+}
+.homeContainer .homeWrapper .homeBtns .homeCallBtn {
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  background-color: #ffffff;
+}
+.homeContainer .homeWrapper .homeBtns .homeCallBtn:hover {
+  background-color: #2d8cff;
+  color: white;
+}/*# sourceMappingURL=Home.css.map */

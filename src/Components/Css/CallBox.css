@@ -1,0 +1,16 @@
+.callBoxContainer {
+  background-color: black;
+  width: 100vw;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .callBoxContainer {
+    overflow-y: scroll;
+  }
+}/*# sourceMappingURL=CallBox.css.map */

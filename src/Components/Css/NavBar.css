@@ -1,0 +1,28 @@
+.navContainer {
+  position: fixed;
+  bottom: 1px;
+  width: 100vw;
+  padding: 1rem;
+  color: white;
+  background-color: rgb(44, 43, 43);
+}
+.navContainer .navWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navContainer .navWrapper .endCall {
+  border: none;
+  text-decoration: none !important;
+  color: white;
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  background-color: rgb(153, 7, 7);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.navContainer .navWrapper .navIcon {
+  width: 1rem;
+  cursor: pointer;
+}/*# sourceMappingURL=NavBar.css.map */

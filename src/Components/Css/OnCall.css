@@ -1,0 +1,51 @@
+.onCallContainer {
+  background-color: black;
+  padding: 1rem;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.onCallContainer .onCallWrapper .videoSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.onCallContainer .onCallWrapper .videoSection #localVideo {
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.33);
+}
+.onCallContainer .onCallWrapper .videoSection #remoteVideo {
+  border-radius: 10px;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.33);
+}
+.onCallContainer .onCallWrapper .videoSection .videoTags {
+  width: 30vw;
+  border: 1px solid #747487;
+}
+
+@media (max-width: 768px) {
+  .onCallContainer {
+    position: relative;
+  }
+  .onCallContainer .videoSection {
+    flex-direction: column;
+    width: 100vw;
+  }
+  .onCallContainer .videoSection #localVideo {
+    position: absolute;
+    width: 40%;
+    top: 0.25rem;
+    right: 0.5rem;
+  }
+  .onCallContainer .videoSection #remoteVideo {
+    width: 90% !important;
+  }
+  .onCallContainer .videoSection .videoTags {
+    border: 1px solid #747487;
+  }
+}/*# sourceMappingURL=OnCall.css.map */

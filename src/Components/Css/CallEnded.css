@@ -1,0 +1,56 @@
+.callEndedContainer {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(1deg, #41568a, #5f6e96, #6d7a9a);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.callEndedContainer .callEndedWrapper .callEndedHeader {
+  display: flex;
+  flex-direction: column;
+}
+.callEndedContainer .callEndedWrapper .callEndedHeader p {
+  justify-content: flex-start;
+  font-size: 1.3rem;
+}
+.callEndedContainer .callEndedWrapper .callEndedHeader .rejoin {
+  background-color: rgba(43, 82, 190, 0);
+  border: 1px solid rgba(255, 255, 255, 0.349);
+}
+.callEndedContainer .callEndedWrapper .callEndedHeader .return {
+  border: 1px solid rgba(255, 255, 255, 0.053);
+}
+.callEndedContainer .callEndedWrapper .callEndedHeader button {
+  margin-right: 1rem;
+  transition: all ease-in-out 250ms;
+  cursor: pointer;
+  color: white;
+  border: none;
+  background-color: #4867bb;
+  box-shadow: 2px 2px 3px #516cb7;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  border-radius: 0.35rem;
+}
+.callEndedContainer .callEndedWrapper .callEndedHeader button:hover {
+  background-color: #2b52be;
+  color: white;
+}
+.callEndedContainer .callEndedWrapper .callEndedRating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #495c8f;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem 1rem 1rem;
+  border-radius: 0.25rem;
+  transition: all ease-in-out 550ms;
+}
+.callEndedContainer .callEndedWrapper .callEndedRating p {
+  color: white;
+  font-size: 1rem;
+}/*# sourceMappingURL=CallEnded.css.map */
